@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load agent_tags %}
+{% block content %}
+
+<section class="text-gray-700 body-font overflow-hidden">
+    <div class="container px-5 mx-auto">
+        <div class="w-full md:w-4/5 mx-auto flex flex-wrap">
+            <div class="w-full lg:pr-10  mb-6 lg:mb-0">
+                <div class="w-full flex items-center justify-between space-x-6">
+                    <div class="flex-1 truncate">
+                        <div class="flex text-center justify-center items-center space-x-3 mb-6">
+                            <h3 class="md:text-2xl text-amber-600 font-bold truncate">Client Name: {{ lead.first_name }} {{ lead.last_name }}</h3>
+                        </div>
+                        <p class="mt-1 text-xl text-gray-500 truncate">{{ lead.description }}</p>
+                    </div>
+
+                </div>
+                <div class="grid gap-1 grid-cols-3  flex mb-4 ">
+                    <a href="{% url 'leads:lead-detail' lead.pk %}" class="mr-3 rounded-3xl bg-black text-center justify-center items-center flex flex-grow text-amber-600 font-bold  py-2 px-11 md:text-lg ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+                        Overview
+                    </a>
+
+                    <a href="{% url 'leads:lead-category-update' lead.pk %}" class="mr-3 rounded-3xl bg-gray-300 hover:bg-amber-600 hover:text-black  text-center justify-center items-center flex flex-grow text-gray-600 py-2 text-lg px-11">
+<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+</svg>
+                        Update Status
+                    </a>
+
+{% if request.user|has_permissions:"edit_leads"%}     
+                    <a href="{% url 'leads:lead-update' lead.pk %}" class="mr-3 rounded-3xl bg-gray-300 hover:bg-amber-600 hover:text-black  text-center justify-center items-center flex flex-grow text-gray-600 py-2 text-lg px-11">
+<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+</svg>
+                        Edit
+                    </a>
+{% endif %}
+                </div>
+                <div class="flex mb-1 py-1">
+                    <span class="text-amber-600 font-bold  ">Source</span>
+                    <span class="ml-auto text-gray-900">{{ lead.source }}</span>
+                </div>
+{% if request.user|has_permissions:"email"%}    
+                <div class="flex border-t mb-1 border-gray-300 py-2">
+                    <span class="text-amber-600 font-bold  ">Email</span>
+                    <span class="ml-auto text-gray-900">{{ lead.email }}</span>
+                </div>
+  {% endif %}
+
+{% if request.user|has_permissions:"phone_number"%}    
+                <div class="flex border-t mb-1 border-gray-300 py-2">
+                    <span class="text-amber-600 font-bold  ">Phone Number</span>
+                    <span class="ml-auto text-gray-900">{{ lead.phone_number }}</span>
+                </div>
+  {% endif %}
+                <div class="flex border-t mb-1 border-gray-300 py-2">
+                    <span class="text-amber-600 font-bold  ">Country</span>
+                    <span class="ml-auto text-gray-900">{{ lead.country }}</span>
+                </div>
+                <div class="flex border-t mb-1 border-gray-300 py-2">
+                    <span class="text-amber-600 font-bold  ">Campaign</span>
+                    <span class="ml-auto text-gray-900">{{ lead.campaign }}</span>
+                </div>
+                <div class="flex border-t mb-1 border-gray-300 py-2">
+                    <span class="text-amber-600 font-bold  ">Date</span>
+                    <span class="ml-auto text-gray-900">{{ lead.date_added }}</span>
+                </div>
+                <div class="flex border-t mb-1 border-gray-300 py-2">
+                    <span class="text-amber-600 font-bold  ">Service</span>
+                    <span class="ml-auto text-gray-900">{{ lead.service }}</span>
+                </div>
+                <div class="flex border-t mb-1 border-gray-300 py-2">
+                    <span class="text-amber-600 font-bold  ">Status</span>
+                    <span class="ml-auto text-gray-900">{{ lead.category }}</span>
+                </div>
+                              <div class="flex border-t mb-1 border-gray-300 py-2">
+                    <span class="text-amber-600 font-bold  ">Last Called</span>
+                    <span class="ml-auto text-gray-900">  {{ lead.last_called }}</span>
+                </div>
+                <div class="flex border-t mb-1 border-gray-300 py-2">
+                    <span class="text-amber-600 font-bold  ">Tags</span>
+                    {% for tag in lead.tags.all %}
+                        <!-- <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"> -->
+                        <span class="ml-auto text-gray-900">
+                            {{ tag.name }}
+                        </span>
+                    {% endfor %}
+                </div>
+            </div>
+
+        <a href="{% url 'leads:lead-followup-create' lead.pk %}" class="text-black bg-amber-600 hover:bg-black hover:text-amber-600 px-3 py-2 rounded-2xl">Add a followup</a>
+
+        </div>
+
+        {% for followup in lead.followups.all %}
+            <div class="mt-5 shadow px-4 sm:px-6">
+                <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4">
+                    <dt class="text-sm font-medium text-gray-500">
+                    Notes (<a href="{% url 'leads:lead-followup-update' followup.pk %}" class="text-amber-600  hover:text-blue-700">update</a>)
+                    </dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                    {{ followup.notes }}
+                    </dd>
+                </div>
+                {% if followup.file %}
+                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4">
+                        <dt class="text-sm font-medium text-gray-500">
+                        Attachments
+                        </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        <ul class="border border-gray-200 rounded-md divide-y divide-gray-200">
+                            <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                                <div class="w-0 flex-1 flex items-center">
+                                    <!-- Heroicon name: paper-clip -->
+                                    <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="ml-2 flex-1 w-0 truncate">
+                                    {{ followup.file.name }}
+                                    </span>
+                                </div>
+                                <div class="ml-4 flex-shrink-0">
+                                    <a href="{{ followup.file.url }}" download class="font-medium text-indigo-600 hover:text-indigo-500">
+                                    Download
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        </dd>
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+
+        
+
+    </div>
+  </section>
+{% endblock content %}

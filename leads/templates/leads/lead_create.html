@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load tailwind_filters %}
+{% load  theme_filters %}
+
+{% block content %}
+
+<div class="container px-5 mx-auto">
+    <a class="hover:text-amber-600 " href="{% url 'leads:lead-list' %}">Go back to leads</a>
+    <div class="py-5 border-t border-gray-200">
+        <h1 class="text-4xl text-center text-amber-600  font-extrabold">Create new lead</h1>
+    </div>
+
+    <form method="post" class="grid gap-1 grid-cols-2  flex-wrap">
+        {% csrf_token %}
+        {{ form|custom_crispy_form:'dark:text-white' }}
+        <br>
+        <button type='submit' class="w-max text-black bg-amber-600  border-0 py-3 px-11 focus:outline-none hover:bg-black hover:text-amber-600 rounded-2xl">
+            Submit
+        </button>
+    </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load tailwind_filters %}
+{% load static %}
+
+{% block content %} 
+
+<div class="max-w-lg mx-auto">
+    <a class="hover:text-amber-600" href="{% url 'leads:lead-detail' lead.pk %}">Go back to {{ lead }}</a>
+    <div class="py-5 border-t border-gray-200">
+        <h1 class="text-4xl text-amber-600">Create a new followup</h1>
+    </div>
+    <button id='show-reminder-fields' class="w-1/2 text-black bg-amber-600 hover:bg-black hover:text-amber-600 px-3 py-2 rounded-md">Add a reminder</button>
+    <button id='hide-reminder-fields' class="w-1/2 text-black bg-amber-600 hover:bg-black hover:text-amber-600 px-3 py-2 rounded-md">Cancel reminder</button>
+    <form method="post" class="mt-5" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input id="is_reminder" name="is_reminder" type="hidden" />
+        <button type='submit' class="w-full text-black bg-amber-600 hover:bg-black hover:text-amber-600 px-3 py-2 rounded-md">
+            Submit
+        </button>
+    </form>
+</div>
+<script src="{% static 'js/add-or-remove-reminder.js' %}"></script>
+
+{% endblock content %}

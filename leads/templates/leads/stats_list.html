@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load tailwind_filters %}
+
+{% block content %}
+
+<div class="max-w-lg mx-auto">
+  <a class="hover:text-amber-600 " href="{% url 'leads:lead-list' %}">Go back to leads</a>
+  <br>
+  <a class="hover:text-amber-600 " href="{% url 'leads:stats_filter' %}">Select Agent</a>
+  <div class="py-5 border-t border-gray-200">
+    <h1 class="text-4xl text-center text-amber-600  font-extrabold">Agent stats View</h1>
+    <p class="text-center mt-6">
+      Start date: {{ start_date }} |
+      End date: {{ end_date }} |
+      <a class="text-amber-600 font-bold hover:text-black" href="{{ export_link }}">Export</a>
+    </p>
+  </div>
+  <!-- <div class="lg:w-2/3 w-full mx-auto overflow-auto"></div> -->
+  <div class="w-full mx-auto overflow-auto flex justify-between">
+    {% for agent in data %}
+      <table class="table-auto w-full text-left whitespace-no-wrap">
+        {% for k,v in agent.items %}
+        <tr>
+          <th class="px-4 py-3 title-font tracking-wider font-medium text-amber-600 text-sm bg-black rounded-tl rounded-bl">{{ k|upper }}</th>
+          <td class="px-4 py-3">{{ v }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}
