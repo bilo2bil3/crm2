@@ -24,7 +24,7 @@
             {% if request.user|has_permissions:"action_button"%}
 
                 <div class="dropdown ">
-                    <button class=" dropbtn w-full flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-2xl text-black bg-amber-600 hover:bg-gray-900 hover:text-amber-600 md:py-2 md:text-lg md:px-10 sm:text-xs">Action</button>
+                    <button class=" dropbtn w-full flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-2xl text-black bg-[#55FFF8] hover:bg-gray-900 hover:text-amber-600 md:py-2 md:text-lg md:px-10 sm:text-xs">Action</button>
                     <div class="dropdown-content">
                         <a href="#" id="delete-leads">Delete</a>
                         <a href="{{ export_link }}">Export</a>
@@ -34,7 +34,7 @@
                 </div>
 
             <h1>Change Status</h1>
-            <select class="form-select form-select-sm w-half flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-2xl text-black bg-amber-600 hover:bg-gray-900 hover:text-amber-600 md:py-2 md:text-lg md:px-10 sm:text-xs" id="statusSelect" name="statusSelect">
+            <select class="form-select form-select-sm w-half flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-2xl text-black bg-[#55FFF8] hover:bg-gray-900 hover:text-amber-600 md:py-2 md:text-lg md:px-10 sm:text-xs" id="statusSelect" name="statusSelect">
                     {% for state in status %}
                     <option value="{{state}}">{{state}}</option>
                     {% endfor %}
@@ -55,7 +55,7 @@
        {% if request.user|has_permissions:"assign_agents"%}
 
                         <div id="assign-leads-view-1" >
-                            <button id="show-assign-leads" class=" w-full flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-2xl text-black bg-amber-600 hover:bg-black hover:text-amber-600 md:py-2 md:text-lg md:px-10">
+                            <button id="show-assign-leads" class=" w-full flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-2xl text-black bg-[#55FFF8] hover:bg-black hover:text-amber-600 md:py-2 md:text-lg md:px-10">
                                 Assign Agent
                             </button>
                         </div>
@@ -68,7 +68,7 @@
                                 {% endfor %}
                             </select>
                             <br>
-                            <button id="assign-leads" class="mt-3 text-black  bg-amber-600 border-0 py-2 px-3 focus:outline-none rounded">
+                            <button id="assign-leads" class="mt-3 text-black  bg-[#55FFF8] border-0 py-2 px-3 focus:outline-none rounded">
                                 Assign
                             </button>
                             <button id="hide-assign-leads" class="mt-3 text-white   bg-red-500 border-0 py-2 px-3 focus:outline-none rounded">
@@ -174,7 +174,7 @@
     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600 dark:text-gray-200 text-center ">
                 
                                         <a class="" href="https://api.whatsapp.com/send?phone={{ lead.phone_number }}" target="_blank">
-                                    <button class="mt-3 text-black  dark:bg-black bg-amber-600  border-0 py-2 px-3 focus:outline-none hover:bg-black hover:text-amber-600 rounded" data-firstname="{{lead.first_name}}" data-lastname="{{lead.last_name}}" data-lead="{{lead.pk}}">
+                                    <button class="mt-3 text-black  dark:bg-black bg-[#55FFF8]  border-0 py-2 px-3 focus:outline-none hover:bg-black hover:text-amber-600 rounded" data-firstname="{{lead.first_name}}" data-lastname="{{lead.last_name}}" data-lead="{{lead.pk}}">
                                         Whatsapp
                                     </button>
                                         </a> 
