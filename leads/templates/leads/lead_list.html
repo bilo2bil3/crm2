@@ -144,7 +144,7 @@
                     <tbody>
                         {# {% for lead in leads %} #}
                         {% for lead in page_obj %}
-                            <tr class="bg-[#1a1a1a] dark:bg-gray-900">
+                            <tr class="bg-[#1a1a1a] dark:bg-gray-900 border-b border-[#1a1a1a]">
                                 <td class="px-2 py-2 whitespace-nowrap text-xs font-medium text-[#55FFF8] text-center ">
                                     <input class='select-lead' type="checkbox" value="{{ lead.id }}">
                                 </td>
