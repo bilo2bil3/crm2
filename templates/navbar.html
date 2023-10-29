@@ -12,13 +12,13 @@
           class="w-10 h-10"
           alt="CRM logo"
         />
-        <span class="hidden md:block ml-2">Blacksmoke CRM</span>
+        <span class="hidden md:block ml-2 md:text-sm">Blacksmoke CRM</span>
       </div>
 
       <div
         class="rounded-3xl mr-9 w-full flex justify-between items-center h-14 bg-[#1a1a1a] dark:bg-[#1a1a1a]"
       >
-        <div class="ml-10 p-2 flex italic md:text-xs">
+        <div class="ml-10 p-2 flex italic md:text-sm">
           {% if request.user.is_authenticated %}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="list-none">
             <a
               href="{% url 'logout' %}"
               class="flex items-center mr-4 hover:text-blue-100"
@@ -165,7 +165,7 @@
             
           </script>
           {% else %}
-          <li>
+          <li class="list-none">
             <a
               href="{% url 'login' %}"
               class="flex items-center mr-4 hover:text-blue-100"
