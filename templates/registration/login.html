@@ -8,12 +8,12 @@
     <!-- <div class="py-5 border-b border-gray-200">
         <a class="hover:text-amber-600 " href="{% url 'signup' %}">Don't have an account?</a>
     </div> -->
-<h1 class="text-amber-600  text-3xl text-center font-bold mb-5">Welcome to BlackSmoke CRM</h1>
+<h1 class="text-[#55FFF8]  text-3xl text-center font-bold mb-5">Welcome to BlackSmoke CRM</h1>
 <h3 class="text-gray-600 text-xl text-center italic font-bold mb-5">Please login here</h3>
     <form method="post" class="mt-5">
         {% csrf_token %}
         {{ form|crispy }}
-        <button type='submit' class="w-full text-amber-600 bg-black font-bold hover:bg-amber-600 hover:text-black px-3 py-2 rounded-md">
+        <button type='submit' class="w-full text-gray-800 bg-[#55FFF8] font-bold hover:bg-gray-800 hover:text-[#55FFF8] px-3 py-2 rounded-md">
             Login
         </button>
     </form>
