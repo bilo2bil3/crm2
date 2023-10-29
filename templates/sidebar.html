@@ -2,7 +2,7 @@
 <!-- Sidebar -->
 <div x-data="setup()" :class="{ 'dark': isDark }">
   <div
-    class="mt-16 ml-5 rounded-3xl h-5/6 fixed flex flex-col top-14 left-0 w-14 hover:w-64 md:w-64 bg-[#1a1a1a] dark:bg-[#1a1a1a] text-[#55FFF8] transition-all duration-300 border-none z-10 sidebar"
+    class="mt-16 ml-5 rounded-3xl h-5/6 fixed flex flex-col top-14 left-0 w-14 hover:w-64 md:w-60 bg-[#1a1a1a] dark:bg-[#1a1a1a] text-[#55FFF8] transition-all duration-300 border-none z-10 sidebar"
   >
     <div
       class="overflow-y-auto overflow-x-hidden flex flex-col justify-between flex-grow"
@@ -13,7 +13,7 @@
         <li>
           <a
             href="{% url 'dashboard_form' %}"
-            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800   border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
+            class="relative flex flex-row items-center h-9 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800   border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
           >
             <span class="inline-flex justify-center items-center ml-4">
               <svg
@@ -39,7 +39,7 @@
         <li>
           <a
             href="{% url 'leads:lead-list' %}"
-            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
+            class="relative flex flex-row items-center h-9 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
           >
             <span class="inline-flex justify-center items-center ml-4">
               <svg
@@ -64,7 +64,7 @@
         <li>
           <a
             href="{% url 'schedule:schedule-list' %}"
-            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
+            class="relative flex flex-row items-center h-9 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
           >
             <span class="inline-flex justify-center items-center ml-4">
               <svg
@@ -89,7 +89,7 @@
         <li>
           <a
             href="{% url 'leads:lead-search' %}"
-            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
+            class="relative flex flex-row items-center h-9 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
           >
             <span class="inline-flex justify-center items-center ml-4">
               <svg
@@ -115,7 +115,7 @@
         <li>
           <a
             href="{% url 'leads:lead-create' %}"
-            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
+            class="relative flex flex-row items-center h-9 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
           >
             <span class="inline-flex justify-center items-center ml-4">
               <svg
@@ -142,7 +142,7 @@
         <li>
           <a
             href="{% url 'agents:agent-list' %}"
-            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
+            class="relative flex flex-row items-center h-9 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
           >
             <span class="inline-flex justify-center items-center ml-4">
               <svg
@@ -169,7 +169,7 @@
         <li>
           <a
             href="{% url 'permissions:permission-list' %}"
-            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
+            class="relative flex flex-row items-center h-9 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
           >
             <span class="inline-flex justify-center items-center ml-4">
               <svg
@@ -196,7 +196,7 @@
         <li>
           <a
             href="{% url 'leads:leads-upload' %}"
-            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
+            class="relative flex flex-row items-center h-9 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
           >
             <span class="inline-flex justify-center items-center ml-4">
               <svg
@@ -223,7 +223,7 @@
         <li>
           <a
             href="{% url 'leads:add-sheet' %}"
-            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
+            class="relative flex flex-row items-center h-9 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
           >
             <span class="inline-flex justify-center items-center ml-4">
               <svg
@@ -250,7 +250,7 @@
         <li>
           <a
             href="{% url 'leads:add-tag' %}"
-            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8] hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
+            class="relative flex flex-row items-center h-9 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8] hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
           >
             <span class="inline-flex justify-center items-center ml-4">
               <svg
@@ -277,7 +277,7 @@
         <li>
           <a
             href="{% url 'leads:stats_filter' %}"
-            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
+            class="relative flex flex-row items-center h-9 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
           >
             <span class="inline-flex justify-center items-center ml-4">
               <svg
@@ -304,7 +304,7 @@
         <li>
           <a
             href="{% url 'leads:sales-report-list' %}"
-            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
+            class="relative flex flex-row items-center h-9 focus:outline-none hover:bg-[#55FFF8]  dark:hover:bg-[#55FFF8]  hover:text-gray-800  dark:text-gray-400 hover:text-gray-800  border-l-4 border-transparent hover:border-gray-200 dark:hover:border-gray-200 pr-6"
           >
             <span class="inline-flex justify-center items-center ml-4">
               <svg
