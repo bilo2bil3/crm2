@@ -6,15 +6,15 @@
 <div class="container px-5 mx-auto">
 
     <div class="py-5 border-b border-gray-200 ">
-        <a class="hover:text-amber-600 " href="{% url 'permissions:permission-list' %}">Go back to permissions</a>
+        <a class="hover:text-[#55FFF8] " href="{% url 'permissions:permission-list' %}">Go back to permissions</a>
     </div>
 
-    <h1 class="text-4xl text-center text-amber-600  font-extrabold mb-14">Create a new permission</h1>
+    <h1 class="text-4xl text-center text-[#55FFF8]  font-extrabold mb-14">Create a new permission</h1>
     <form method="post" class="grid gap-1 grid-cols-2  flex flex-wrap">
         {% csrf_token %}
         {{ form|crispy }}
         <br>
-        <button type="submit" class="w-max text-gray-800 bg-[#55FFF8]  border-0 py-3 px-11 focus:outline-none hover:bg-black hover:text-amber-600  rounded">Create Permission</button>
+        <button type="submit" class="w-max text-gray-800 bg-[#55FFF8]  border-0 py-3 px-11 focus:outline-none hover:bg-black hover:text-[#55FFF8]  rounded">Create Permission</button>
     </form>
 
 </div>

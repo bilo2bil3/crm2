@@ -6,12 +6,12 @@
   <div class="h-full mb-10 items-center justify-center">
     <div class="items-center justify-center">
       <div class="flex flex-col text-center">
-        <h1 class="text-4xl text-center text-amber-600 font-extrabold">
+        <h1 class="text-4xl text-center text-[#55FFF8] font-extrabold">
           Connect Google Sheets
         </h1>
 
         <a
-          class="text-gray-500 dark:text-gray-200 hover:text-amber-600"
+          class="text-gray-500 dark:text-gray-200 hover:text-[#55FFF8]"
           href="{% url 'leads:lead-list' %}"
         >
           Go back to leads </a
@@ -27,7 +27,7 @@
         <div class="w-full">
           <button
             type="submit"
-            class="w-1/4 text-black hover:text-amber-600 bg-amber-600 hover:bg-black px-3 py-2 rounded-md"
+            class="w-1/4 text-black hover:text-[#55FFF8] bg-[#55FFF8] hover:bg-black px-3 py-2 rounded-md"
           >
             Connect
           </button>
@@ -38,34 +38,34 @@
       <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
           <div
-            class="shadow overflow-hidden border-b border-amber-600 sm:rounded-lg"
+            class="shadow overflow-hidden border-b border-[#55FFF8] sm:rounded-lg"
           >
             <table class="min-w-full divide-y 1/2">
               <thead class="bg-gray-50">
                 <tr>
                   <th
                     scope="col"
-                    class="px-8 py-3 text-centre text-xs font-medium text-amber-600 font-bold bg-black dark:bg-gray-900 gap-x-2.5 uppercase tracking-wider"
+                    class="px-8 py-3 text-centre text-xs font-medium text-[#55FFF8] font-bold bg-black dark:bg-gray-900 gap-x-2.5 uppercase tracking-wider"
                   >
                     Source
                   </th>
 
                   <th
                     scope="col"
-                    class="px-8 py-3 text-centre text-xs font-medium text-amber-600 font-bold bg-black dark:bg-gray-900 gap-x-2.5 uppercase tracking-wider"
+                    class="px-8 py-3 text-centre text-xs font-medium text-[#55FFF8] font-bold bg-black dark:bg-gray-900 gap-x-2.5 uppercase tracking-wider"
                   >
                     Url
                   </th>
 
                   <th
                     scope="col"
-                    class="px-8 py-3 text-centre text-xs font-medium text-amber-600 font-bold bg-black dark:bg-gray-900 gap-x-2.5 uppercase tracking-wider"
+                    class="px-8 py-3 text-centre text-xs font-medium text-[#55FFF8] font-bold bg-black dark:bg-gray-900 gap-x-2.5 uppercase tracking-wider"
                   >
                     Sheet name
                   </th>
                   <th
                     scope="col"
-                    class="px-8 py-3 text-centre text-xs font-medium text-amber-600 font-bold bg-black dark:bg-gray-900 gap-x-2.5 uppercase tracking-wider"
+                    class="px-8 py-3 text-centre text-xs font-medium text-[#55FFF8] font-bold bg-black dark:bg-gray-900 gap-x-2.5 uppercase tracking-wider"
                   >
                     Delete
                   </th>
@@ -78,7 +78,7 @@
                   <td
                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-400"
                   >
-                    <a class="text-amber-600 font-bold">{{ sheet.source }}</a>
+                    <a class="text-[#55FFF8] font-bold">{{ sheet.source }}</a>
                   </td>
 
                   <td
@@ -98,7 +98,7 @@
                   >
                     <a
                       href="{% url 'leads:delete-sheet' sheet.pk %}"
-                      class="text-amber-600 font-bold"
+                      class="text-[#55FFF8] font-bold"
                     >
                       Delete
                     </a>

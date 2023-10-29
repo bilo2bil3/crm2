@@ -4,15 +4,15 @@
 {% block content %}
 
 <div class="w-full text-center items-center justify-center ">
-  <a class="hover:text-amber-600 " href="{% url 'leads:lead-list' %}">Go back to leads</a>
+  <a class="hover:text-[#55FFF8] " href="{% url 'leads:lead-list' %}">Go back to leads</a>
   <div class="py-5 border-t border-gray-200">
-    <h1 class="text-4xl text-center text-amber-600  font-extrabold">Sales report</h1>
+    <h1 class="text-4xl text-center text-[#55FFF8]  font-extrabold">Sales report</h1>
   </div>
 
   <form method="post" class="grid gap-2 grid-cols-2  flex flex-wrap mt-4 " action="">
     {% csrf_token %}
     {{ form|crispy }}
-        <button type='submit' class="w-1/2 mt-3 text-black hover:text-amber-600 bg-amber-600  border-0 py-3 px-3 focus:outline-none hover:bg-black rounded-2xl">
+        <button type='submit' class="w-1/2 mt-3 text-black hover:text-[#55FFF8] bg-[#55FFF8]  border-0 py-3 px-3 focus:outline-none hover:bg-black rounded-2xl">
     Show result
     </button>
   </form>

@@ -146,7 +146,7 @@
 .dark .dark\:hover\:text-gray-100:hover {
   color: rgba(243, 244, 246);
 }
-.dark .dark\:hover\:text-amber-600 :hover {
+.dark .dark\:hover\:text-[#55FFF8] :hover {
   color: rgba(59, 130, 246);
 }
 

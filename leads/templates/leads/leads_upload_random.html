@@ -5,18 +5,18 @@
 
 
 <div class="w-max m-auto ">
-    <a class="hover:text-amber-600" href="{% url 'leads:lead-list' %}">Go back to leads</a>
+    <a class="hover:text-[#55FFF8]" href="{% url 'leads:lead-list' %}">Go back to leads</a>
     <div class="py-5 border-t border-gray-200">
-        <h1 class="text-2xl md:text-4xl lg:text-4xl  text-center text-amber-600  font-extrabold mb-10">Upload a CSV file | Random</h1>
+        <h1 class="text-2xl md:text-4xl lg:text-4xl  text-center text-[#55FFF8]  font-extrabold mb-10">Upload a CSV file | Random</h1>
 
 <div class="mt-5 sm:mt-8 sm:flex justify-center ">
         <div class="mt-4 mr-5 ">
-            <a class="w-max flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black hover:text-amber-600 bg-amber-600 hover:bg-black md:py-3 md:text-lg md:px-10" href="{% url 'leads:leads-upload' %}">
+            <a class="w-max flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black hover:text-[#55FFF8] bg-[#55FFF8] hover:bg-black md:py-3 md:text-lg md:px-10" href="{% url 'leads:leads-upload' %}">
                 Unassigned Upload
             </a>
         </div>
         <div class="mt-4">
-            <a class="w-max flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black hover:text-amber-600 bg-amber-600 hover:bg-black md:py-3 md:text-lg md:px-10" href="{% url 'leads:leads-upload-selected' %}">
+            <a class="w-max flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black hover:text-[#55FFF8] bg-[#55FFF8] hover:bg-black md:py-3 md:text-lg md:px-10" href="{% url 'leads:leads-upload-selected' %}">
                 Select Agent
             </a>
         </div>
@@ -31,7 +31,7 @@
     
         {% csrf_token %}
         {{ form|crispy }}
-                <button type='submit' class="w-1/2 text-black hover:text-amber-600 bg-amber-600 hover:bg-black px-3 py-2 rounded-md">
+                <button type='submit' class="w-1/2 text-black hover:text-[#55FFF8] bg-[#55FFF8] hover:bg-black px-3 py-2 rounded-md">
             Upload
         </button>
     </form>

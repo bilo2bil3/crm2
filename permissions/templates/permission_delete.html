@@ -4,7 +4,7 @@
 {% block content %}
 <div class="max-w-lg mx-auto">
     <div class="py-5 border-b border-gray-200">
-        <a class="hover:text-amber-600 " href="{% url 'permissions:permission-list' %}">Go back to permissions</a>
+        <a class="hover:text-[#55FFF8] " href="{% url 'permissions:permission-list' %}">Go back to permissions</a>
     </div>
     <h1 class="text-3xl text-gray-800">Are you sure you want to delete the <b><i>{{ permission.name }}</i></b> permission?</h1>
     <form method="post" class="mt-5">
@@ -13,7 +13,7 @@
         <button type="submit" class="w-full text-white bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded-md">Yes</button>
     </form>
     <div class="py-5 mt-5">
-        <a class="hover:text-amber-600 " href="{% url 'permissions:permission-list' %}">Cancel</a>
+        <a class="hover:text-[#55FFF8] " href="{% url 'permissions:permission-list' %}">Cancel</a>
     </div>
 </div>
 {% endblock content %}

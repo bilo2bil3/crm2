@@ -18,14 +18,14 @@
 </div> {% endcomment %}
 
 <div class="max-w-lg mx-auto">
-    <a class="hover:text-amber-600" href="{% url 'schedule:schedule-list' %}">Go back to schedule</a>
+    <a class="hover:text-[#55FFF8]" href="{% url 'schedule:schedule-list' %}">Go back to schedule</a>
     <div class="py-5 border-t border-gray-200">
-        <h1 class="text-4xl text-amber-600">Create a new followup</h1>
+        <h1 class="text-4xl text-[#55FFF8]">Create a new followup</h1>
     </div>
     <form class="space-y-6" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form|crispy }}
-        <button type="submit" class="w-full text-black bg-amber-600 hover:bg-black hover:text-amber-600 px-3 py-2 rounded-md">Add Reminder</button>
+        <button type="submit" class="w-full text-black bg-[#55FFF8] hover:bg-black hover:text-[#55FFF8] px-3 py-2 rounded-md">Add Reminder</button>
     </form>
 </div>
 

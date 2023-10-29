@@ -4,14 +4,14 @@
 {% block content %}
 
 <div class="max-w-lg mx-auto">
-    <a class="hover:text-amber-600 " href="{% url 'leads:category-list' %}">Go back to categories</a>
+    <a class="hover:text-[#55FFF8] " href="{% url 'leads:category-list' %}">Go back to categories</a>
     <div class="py-5 border-t border-gray-200">
         <h1 class="text-4xl text-gray-800">Are you sure you want to delete {{ object.name }}?</h1>
     </div>
     <form method="post" class="mt-5">
         {% csrf_token %}
         {{ form|crispy }}
-        <button type='submit' class="w-full text-white bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded-md">
+        <button type='submit' class="w-full text-white bg-[#55FFF8] hover:bg-[#55FFF8] px-3 py-2 rounded-md">
             Submit
         </button>
     </form>

@@ -4,17 +4,17 @@
 {% block content %}
 
 <div class="max-w-lg mx-auto">
-  <a class="hover:text-amber-600 " href="{% url 'leads:lead-list' %}">Go back to leads</a>
+  <a class="hover:text-[#55FFF8] " href="{% url 'leads:lead-list' %}">Go back to leads</a>
   <div class="py-5 border-t border-gray-200">
-    <h1 class="text-4xl text-center text-amber-600  font-extrabold">Sales Report</h1>
-    <a class="hover:text-amber-600" href="{% url 'leads:sales-report-new' %}">
+    <h1 class="text-4xl text-center text-[#55FFF8]  font-extrabold">Sales Report</h1>
+    <a class="hover:text-[#55FFF8]" href="{% url 'leads:sales-report-new' %}">
       Create new report
     </a>
   </div>
   <div class="w-full mx-auto overflow-auto flex justify-between">
     <ul class="w-full text-left whitespace-no-wrap">
       {% for report in reports %}
-        <li class="px-4 py-3 mb-5 mt-5 title-font tracking-wider font-medium text-black text-sm bg-amber-600 rounded-tl rounded-bl">
+        <li class="px-4 py-3 mb-5 mt-5 title-font tracking-wider font-medium text-black text-sm bg-[#55FFF8] rounded-tl rounded-bl">
           <a class="hover:text-green-300" href="{% url 'leads:sales-report-detail' report.pk %}">{{ report }}</a>
         </li>
       {% endfor %}

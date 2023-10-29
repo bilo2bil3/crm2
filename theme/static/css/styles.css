@@ -742,7 +742,7 @@ video {
   --tw-text-opacity: 1;
   color: rgba(6, 95, 70, var(--tw-text-opacity));
 }
-.text-amber-600 {
+.text-[#55FFF8] {
   --tw-text-opacity: 1;
   color: rgba(59, 130, 246, var(--tw-text-opacity));
 }
@@ -762,7 +762,7 @@ video {
   --tw-text-opacity: 1;
   color: rgba(17, 24, 39, var(--tw-text-opacity));
 }
-.hover\:text-amber-600 :hover {
+.hover\:text-[#55FFF8] :hover {
   --tw-text-opacity: 1;
   color: rgba(59, 130, 246, var(--tw-text-opacity));
 }

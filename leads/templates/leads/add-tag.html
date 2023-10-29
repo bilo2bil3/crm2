@@ -10,9 +10,9 @@
         <div class="items-center justify-center ">
 
                 <div class="flex flex-col text-center ">
-                <h1 class="text-4xl text-center text-amber-600  font-extrabold">Tags</h1>
+                <h1 class="text-4xl text-center text-[#55FFF8]  font-extrabold">Tags</h1>
         
-                <a class="text-gray-500 dark:text-gray-200 hover:text-amber-600" href="{% url 'leads:lead-list' %}">
+                <a class="text-gray-500 dark:text-gray-200 hover:text-[#55FFF8]" href="{% url 'leads:lead-list' %}">
                     Go back to leads
                 </a><br>
 </div>
@@ -22,7 +22,7 @@
         {% csrf_token %}
         {{ form|crispy }}
         <div class="w-full">
-        <button type='submit' class="w-max text-black hover:text-amber-600 bg-amber-600 hover:bg-black px-11 py-2 rounded-md">
+        <button type='submit' class="w-max text-black hover:text-[#55FFF8] bg-[#55FFF8] hover:bg-black px-11 py-2 rounded-md">
             Add
         </button>
         </div>
@@ -31,14 +31,14 @@
         <div class="flex flex-col ">
             <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 ">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                <div class="shadow overflow-hidden border-b  border-amber-600  sm:rounded-lg   ">
+                <div class="shadow overflow-hidden border-b  border-[#55FFF8]  sm:rounded-lg   ">
                 <table class="min-w-full divide-y 1/2">
                     <thead class="bg-gray-50" >
                         <tr>
-                            <th scope="col" class="px-8 py-3 text-centre text-xs text-amber-600 font-bold bg-black dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
+                            <th scope="col" class="px-8 py-3 text-centre text-xs text-[#55FFF8] font-bold bg-black dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
                             Tag Name
                             </th>
-                            <th scope="col" class="px-8 py-3 text-centre text-xs text-amber-600 font-bold bg-black dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
+                            <th scope="col" class="px-8 py-3 text-centre text-xs text-[#55FFF8] font-bold bg-black dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
                         Delete
                         </th>
                         </tr>
@@ -54,7 +54,7 @@
 
 
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
-                                    <a href="{% url 'leads:delete-tag' tag.pk %}" class="text-amber-600 font-bold">
+                                    <a href="{% url 'leads:delete-tag' tag.pk %}" class="text-[#55FFF8] font-bold">
                                         Delete
                                     </a>
                                 </td>

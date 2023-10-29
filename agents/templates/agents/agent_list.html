@@ -8,8 +8,8 @@
         <div class="items-center">
 
                 <div class="flex flex-col text-center ">
-                <h1 class="text-4xl text-center text-amber-600  font-extrabold">Agents</h1>
-                <a class="text-gray-500 dark:text-gray-200 hover:text-amber-600" href="{% url 'agents:agent-create' %}">
+                <h1 class="text-4xl text-center text-[#55FFF8]  font-extrabold">Agents</h1>
+                <a class="text-gray-500 dark:text-gray-200 hover:text-[#55FFF8]" href="{% url 'agents:agent-create' %}">
                     Create a new agent
                 </a><br>
 </div>
@@ -18,27 +18,27 @@
         <div class="flex flex-col w-full">
             <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 ">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                <div class="shadow overflow-hidden border-b  border-amber-600  sm:rounded-lg">
+                <div class="shadow overflow-hidden border-b  border-[#55FFF8]  sm:rounded-lg">
                 <table class="min-w-full divide-y">
                     <thead class="bg-gray-50" >
                         <tr>
-                            <th scope="col" class="px-8 py-3 text-centre text-xs font-medium text-amber-600  bg-black  dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
+                            <th scope="col" class="px-8 py-3 text-centre text-xs font-medium text-[#55FFF8]  bg-black  dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
                             Full Name
                             </th>
 
-                            <th scope="col" class="px-8 py-3 text-centre text-xs font-medium text-amber-600  bg-black  dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
+                            <th scope="col" class="px-8 py-3 text-centre text-xs font-medium text-[#55FFF8]  bg-black  dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
                             Username
                             </th>
 
-                            <th scope="col" class="px-8 py-3 text-centre text-xs font-medium text-amber-600  bg-black  dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
+                            <th scope="col" class="px-8 py-3 text-centre text-xs font-medium text-[#55FFF8]  bg-black  dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
                             Extention
                             </th>
 
-                            <th scope="col" class="px-8 py-3 text-centre text-xs font-medium text-amber-600  bg-black  dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
+                            <th scope="col" class="px-8 py-3 text-centre text-xs font-medium text-[#55FFF8]  bg-black  dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
                             Edit
                             <br>
 
-                            <th scope="col" class="px-8 py-3 text-centre text-xs font-medium text-amber-600  bg-black  dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
+                            <th scope="col" class="px-8 py-3 text-centre text-xs font-medium text-[#55FFF8]  bg-black  dark:bg-gray-900  gap-x-2.5  uppercase tracking-wider">
                             Permissions
                             <br>
                         </tr>
@@ -48,7 +48,7 @@
                 {% for agent in object_list %}
                             <tr class="bg-gray-100 dark:bg-gray-900 text-center">
                                 <td class="px-6 py-4 blackspace-nowrap text-sm font-medium text-gray-400">
-                                    <a class="text-amber-600 font-bold">{{ agent.user.first_name }} {{ agent.user.last_name }}</a>
+                                    <a class="text-[#55FFF8] font-bold">{{ agent.user.first_name }} {{ agent.user.last_name }}</a>
                                 </td>
 
                                 <td class="px-6 py-4 blackspace-nowrap text-sm text-gray-600 dark:text-gray-200  text-center ">
@@ -60,13 +60,13 @@
                                 </td>
 
                                 <td class="px-6 py-4 blackspace-nowrap text-sm font-medium text-center">
-                                    <a href="{% url 'agents:agent-update' agent.pk %}" class="text-amber-600 font-bold">
+                                    <a href="{% url 'agents:agent-update' agent.pk %}" class="text-[#55FFF8] font-bold">
                                         Edit
                                     </a>
                                 </td>
 
                                 <td class="px-6 py-4 blackspace-nowrap text-sm font-medium text-center">
-                                    <a href="{% url 'agents:agent-permission' agent.pk %}" class="text-amber-600  font-bold">
+                                    <a href="{% url 'agents:agent-permission' agent.pk %}" class="text-[#55FFF8]  font-bold">
                                         Permissions
                                     </a>
                                 </td>

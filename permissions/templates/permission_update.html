@@ -13,7 +13,7 @@
                 {% comment %} <a href="{% url 'permissions:agent-detail' agent.pk %}" class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
                     Overview
                 </a> {% endcomment %}
-                <a href="{% url 'permissions:permission-update' permission.pk %}" class="flex-grow text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1">
+                <a href="{% url 'permissions:permission-update' permission.pk %}" class="flex-grow text-[#55FFF8] border-b-2 border-[#55FFF8] py-2 text-lg px-1">
                     Update Details
                 </a>
             </div>
@@ -23,7 +23,7 @@
                 <button type="submit" class="w-full text-white bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded-md">Update Permission</button>
             </form>
             {% comment %} <div class="mt-5 py-5 border-t border-gray-200">
-                <a href="{% url 'permissions:permission-delete' permission.pk %}" class="w-1/2 mt-3 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                <a href="{% url 'permissions:permission-delete' permission.pk %}" class="w-1/2 mt-3 text-white bg-[#55FFF8] border-0 py-2 px-6 focus:outline-none hover:bg-[#55FFF8] rounded">
                     Delete
                 </a>
             </div> {% endcomment %}

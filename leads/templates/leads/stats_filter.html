@@ -4,14 +4,14 @@
 {% block content %}
 
 <div class=" mx-auto">
-  <a class="hover:text-amber-600 " href="{% url 'leads:lead-list' %}">Go back to leads</a>
+  <a class="hover:text-[#55FFF8] " href="{% url 'leads:lead-list' %}">Go back to leads</a>
   <div class="py-5 border-t border-gray-200">
-    <h1 class="text-4xl text-center text-amber-600  font-extrabold">Agent stats</h1>
+    <h1 class="text-4xl text-center text-[#55FFF8]  font-extrabold">Agent stats</h1>
   </div>
   <form method="get" class="gap-x-5 flex flex-wrap mt-8 items-center justify-center" action="{% url 'leads:stats_list' %}">
     {{ form|crispy }}
     <br>
-    <button type='submit' class="w-max mt-3 text-gray-800 bg-[#55FFF8]  border-0 py-3 px-3 focus:outline-none hover:bg-black hover:text-amber-600 rounded">
+    <button type='submit' class="w-max mt-3 text-gray-800 bg-[#55FFF8]  border-0 py-3 px-3 focus:outline-none hover:bg-black hover:text-[#55FFF8] rounded">
     Show stats
     </button>
   </form>
