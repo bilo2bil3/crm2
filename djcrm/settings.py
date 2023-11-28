@@ -4,9 +4,10 @@ from pathlib import Path
 import environ
 
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+SECRET_KEY = 'django-insecure-z8j&u#%q%apgrr5$7mvzf4muv)g1)vsl6t-i9mm(+h2_tiov8i'
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 DOMAIN = os.getenv("DOMAIN", "127.0.0.1:8000")
