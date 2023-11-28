@@ -22,6 +22,7 @@ class FollowUpCreateView(LoginRequiredMixin, generic.CreateView):
 
     def form_valid(self, form):
         form.instance.lead = Lead.objects.get(pk=self.kwargs["pk"])
+        form.instance.user = self.request.user
         return super().form_valid(form)
     
     def post(self, request, *args, **kwargs):

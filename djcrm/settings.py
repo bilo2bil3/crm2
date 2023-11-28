@@ -3,22 +3,18 @@ import sys
 from pathlib import Path
 import environ
 
-env = environ.Env(
-    DEBUG=(bool, False)
-)
 
-READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
-if READ_DOT_ENV_FILE:
-    environ.Env.read_env()
-
-DEBUG = env('DEBUG')
-SECRET_KEY = env('SECRET_KEY')
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS", default="127.0.0.1,localhost").split(",")
-DEVELOPMENT_MODE = env("DEVELOPMENT_MODE", default=False)
+SECRET_KEY = 'django-insecure-z8j&u#%q%apgrr5$7mvzf4muv)g1)vsl6t-i9mm(+h2_tiov8i'
+# SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+DOMAIN = os.getenv("DOMAIN", "127.0.0.1:8000")
+DEBUG = os.getenv("DEBUG", True)
+DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", True)
+DEBUG = str(DEBUG).lower() == "true"
+DEVELOPMENT_MODE = str(DEVELOPMENT_MODE).lower() == "true"
+
 
 # Application definition
 
