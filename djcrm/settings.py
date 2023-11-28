@@ -1,11 +1,11 @@
 import os
 import sys
 from pathlib import Path
-import environ
 
+import dj_database_url
 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 SECRET_KEY = 'django-insecure-z8j&u#%q%apgrr5$7mvzf4muv)g1)vsl6t-i9mm(+h2_tiov8i'
 # SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
@@ -116,11 +116,20 @@ if DEVELOPMENT_MODE is True:
         }
     }
 elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
-    if env("DATABASE_URL", default=None) is None:
+    if os.getenv("DATABASE_URL", None) is None:
         raise Exception("DATABASE_URL environment variable not defined")
     DATABASES = {
-        "default": env.db()
+        "default": dj_database_url.parse(os.environ.get("DATABASE_URL")), }
+    DATABASES['default']['OPTIONS'] = {
+        'sslmode': 'require',  # Set the SSL mode to 'require' or the appropriate value
+        'sslrootcert': '/path/to/ca_certificate.pem',
+        'sslcert': '/path/to/client_certificate.pem',
+        'sslkey': '/path/to/client_key.pem',
     }
+    del DATABASES['default']['OPTIONS']['sslmode']
+    del DATABASES['default']['OPTIONS']['sslrootcert']
+    del DATABASES['default']['OPTIONS']['sslcert']
+    del DATABASES['default']['OPTIONS']['sslkey']
 
 
 # Password validation
