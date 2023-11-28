@@ -71,7 +71,7 @@ class FollowUp(models.Model):
     # reminder = models.ManyToManyField(Schedule, related_name='follow_up_reminders')
     notes = models.TextField(blank=True, null=True)
     file = models.FileField(null=True, blank=True, upload_to=handle_upload_follow_ups)
-
+    user = models.ForeignKey(User, related_name="followups_created", on_delete=models.CASCADE)
     def __str__(self):
         return f"{self.lead.first_name} {self.lead.last_name}"
 
